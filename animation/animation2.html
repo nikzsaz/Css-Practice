@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<head>
+    <script>
+        $(document).ready(function() {
+            $('.box').on('click',function(){
+                $(this).toggleClass('is-paused');
+            });
+        });
+    </script>
+<style>
+body{
+    pading: 50px;
+    
+}
+.is-paused{
+    animation-play-state: paused;
+}
+/*visibility hidden collapse visible*/
+.box{
+    width: 100px;
+    height: 200px;
+    background: pink;
+    display: inline-block;
+    position: relative;
+    animation-name: myframe;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /* reverse normal alternate*/
+    animation-fill-mode: normal; /** forwards**/
+   // animation-play-state: running; /* paused */
+   
+}
+
+@keyframes myframe{
+    0%{
+        height: 100px;
+    }
+    100%{
+        height: 500px;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+</div>
+</body>
+</html>
