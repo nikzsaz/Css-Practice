@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<style>
+body{
+    pading: 50px;
+    
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background: pink;
+    display: inline-block;
+    position: relative;
+    animation: myframe 2s ease-in-out 0s infinite;
+}
+
+@keyframes myframe{
+    0%{
+        height: 200px;
+    }
+    30%,100%{
+        width: 300px;
+    }
+    70%{
+        height: 500px;
+        background:orange;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+</div>
+</body>
+</html>
