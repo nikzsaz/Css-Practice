@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<head>
+    <script>
+        $(document).ready(function() {
+            $('html').on('click',function(){
+                $(this).find('body').append('<div class="box"></div>');
+            });
+        });
+    </script>
+<style>
+body{
+    pading: 150px;
+    
+}
+.is-paused{
+    animation-play-state: paused;
+}
+/*visibility hidden collapse visible*/
+.box{
+    width: 200px;
+    border-radius: 8%;
+    height: 200px;
+    background: pink;
+    display: inline-block;
+    position: relative;
+    animation-name: myframe;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1; /** infinite**/
+    animation-direction: normal; /* reverse normal alternate*/
+    animation-fill-mode: forwards; /** forwards normal**/
+   // animation-play-state: running; /* paused */
+   
+}
+
+@keyframes myframe{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+</style>
+</head>
+<body>
+
+</body>
+</html>
